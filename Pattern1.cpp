@@ -63,7 +63,7 @@ void pattern7(int n) {
         }
         //stars
         for(int j =0; j<(2*i+1); j++) {
-            cout<<" *";
+            cout<<"*";
         }
         //space
         for(int j =0; j<(n-i-1); j++) {
@@ -83,7 +83,7 @@ for(int i = 0; i<n; i++) {
         }
         //stars
         for(int j =0; j<(2*n-(2*i+1)); j++) {
-            cout<<" * ";
+            cout<<"*";
         }
         //space
         for(int j =0; j<i; j++) {
@@ -98,6 +98,7 @@ int main() {
     int n;
     cout << "Enter the number of rows: ";
     cin >> n;
+    pattern7(n);
     pattern8(n);
     return 0;
 }
