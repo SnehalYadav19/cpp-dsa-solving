@@ -246,11 +246,12 @@ void pattern16(int n)
 
         // number
          char ch = 'A';
-        for (int j = 0; j < (2*i+1); j++)
+         int breakpoint = (2*i+1)/2;
+        for (int j = 1; j <= (2*i+1); j++)
         {
-            cout << ch; 
-            
-
+      cout<<ch;
+      if(j<=breakpoint) ch++;
+      else ch--;
 
         }
 
