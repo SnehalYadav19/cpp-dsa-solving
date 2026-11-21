@@ -264,12 +264,26 @@ void pattern16(int n)
     }
 }
 
+void pattern17(int n) {
+    
+    for(int i=0;i<n;i++) {
+        for(char ch ='E'- i ; ch<='E';ch++) {
+            cout<<ch<<" ";
+    
+        }
+    
+    cout<<endl;
+    }
+
+    
+}
+
 int main()
 {
 
     int n;
     cout << "Enter the number of rows: ";
     cin >> n;
-    pattern16(n);
+    pattern17(n);
     return 0;
 }
