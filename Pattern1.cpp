@@ -235,93 +235,133 @@ void pattern15(int n)
 
 void pattern16(int n)
 {
-   
+
     for (int i = 0; i <= n; i++)
     {
         // space
-        for (int j = 0; j <=(n-i-1); j++)
+        for (int j = 0; j <= (n - i - 1); j++)
         {
             cout << " ";
         }
 
         // number
-         char ch = 'A';
-         int breakpoint = (2*i+1)/2;
-        for (int j = 1; j <= (2*i+1); j++)
+        char ch = 'A';
+        int breakpoint = (2 * i + 1) / 2;
+        for (int j = 1; j <= (2 * i + 1); j++)
         {
-      cout<<ch;
-      if(j<=breakpoint) ch++;
-      else ch--;
-
+            cout << ch;
+            if (j <= breakpoint)
+                ch++;
+            else
+                ch--;
         }
 
         // space
-        for (int j = 0; j <=(n-i-1); j++)
+        for (int j = 0; j <= (n - i - 1); j++)
         {
             cout << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 }
 
-void pattern17(int n) {
-    
-    for(int i=0;i<n;i++) {
-        for(char ch ='E'- i ; ch<='E';ch++) {
-            cout<<ch<<" ";
-    
-        }
-    
-    cout<<endl;
-    }
+void pattern17(int n)
+{
 
-    
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = 'E' - i; ch <= 'E'; ch++)
+        {
+            cout << ch << " ";
+        }
+
+        cout << endl;
+    }
 }
 
-void pattern18(int n) {
-    int iniS=0;
-    for(int i=1;i<n;i++) {
-        //stars
-        for (int j =1;j<=(n-i);j++){
-            cout<<"*";
+void pattern18(int n)
+{
+    int iniS = 0;
+    for (int i = 1; i < n; i++)
+    {
+        // stars
+        for (int j = 1; j <= (n - i); j++)
+        {
+            cout << "*";
         }
 
-        //spaces
-        for(int j =0;j<iniS;j++) {
-            cout<< " ";
+        // spaces
+        for (int j = 0; j < iniS; j++)
+        {
+            cout << " ";
         }
-        //stars
-        for (int j =1;j<=(n-i);j++){
-            cout<<"*";
+        // stars
+        for (int j = 1; j <= (n - i); j++)
+        {
+            cout << "*";
         }
-        iniS+=2;
-        cout<<endl;
-
+        iniS += 2;
+        cout << endl;
     }
-
-
 }
 
-void pattern19(int n) {
-    int iniS=8;
-    for(int i = 1; i<=n;i++) {
-        //stars
-        for(int j=1;j<=i;j++) {
-            cout<<"*";
+void pattern19(int n)
+{
+    int iniS = (2 * n - 2);
+    for (int i = 1; i <= n; i++)
+    {
+        // stars
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
         }
-        //space
-        for(int j =0;j<iniS;j++) {
-            cout<<" ";
+        // space
+        for (int j = 0; j < iniS; j++)
+        {
+            cout << " ";
         }
 
-        //stars
-        for(int j=1;j<=i;j++) {
-            cout<<"*";
-     
+        // stars
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
         }
-        iniS-=2;
-        cout<<endl;
-    
+        iniS -= 2;
+        cout << endl;
+    }
+}
+
+void pattern20(int n)
+{
+    int space = 2 * n - 2;
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        int stars = i;
+        if (i > n)
+        {
+            stars = 2 * n - 1;
+        }
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "*";
+        }
+        // spaces
+        for (int j = 1; j <= space; j++)
+        {
+            cout << " ";
+        }
+
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+        if (i < n)
+        {
+            space -= 2;
+        }
+        else
+            space += 2;
     }
 }
 
@@ -331,7 +371,6 @@ int main()
     int n;
     cout << "Enter the number of rows: ";
     cin >> n;
-    pattern18(n);
-    pattern19(n);
+    pattern20(n);
     return 0;
 }
