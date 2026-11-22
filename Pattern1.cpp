@@ -278,12 +278,37 @@ void pattern17(int n) {
     
 }
 
+void pattern18(int n) {
+    int iniS=0;
+    for(int i=0;i<n;i++) {
+        //stars
+        for (int j =1;j<=n-1;j++){
+            cout<<"*";
+        }
+
+        //spaces
+        for(int j =0;j<iniS;j++) {
+            cout<<" ";
+        }
+        //stars
+        for (int j =1;j<=n-1;j++){
+            cout<<"*";
+        }
+        iniS+=2;
+        cout<<endl;
+
+    }
+
+
+}
+
+
 int main()
 {
 
     int n;
     cout << "Enter the number of rows: ";
     cin >> n;
-    pattern17(n);
+    pattern18(n);
     return 0;
 }
