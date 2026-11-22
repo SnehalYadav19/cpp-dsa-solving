@@ -280,18 +280,18 @@ void pattern17(int n) {
 
 void pattern18(int n) {
     int iniS=0;
-    for(int i=0;i<n;i++) {
+    for(int i=1;i<n;i++) {
         //stars
-        for (int j =1;j<=n-1;j++){
+        for (int j =1;j<=(n-i);j++){
             cout<<"*";
         }
 
         //spaces
         for(int j =0;j<iniS;j++) {
-            cout<<" ";
+            cout<< " ";
         }
         //stars
-        for (int j =1;j<=n-1;j++){
+        for (int j =1;j<=(n-i);j++){
             cout<<"*";
         }
         iniS+=2;
@@ -302,6 +302,28 @@ void pattern18(int n) {
 
 }
 
+void pattern19(int n) {
+    int iniS=8;
+    for(int i = 1; i<=n;i++) {
+        //stars
+        for(int j=1;j<=i;j++) {
+            cout<<"*";
+        }
+        //space
+        for(int j =0;j<iniS;j++) {
+            cout<<" ";
+        }
+
+        //stars
+        for(int j=1;j<=i;j++) {
+            cout<<"*";
+     
+        }
+        iniS-=2;
+        cout<<endl;
+    
+    }
+}
 
 int main()
 {
@@ -310,5 +332,6 @@ int main()
     cout << "Enter the number of rows: ";
     cin >> n;
     pattern18(n);
+    pattern19(n);
     return 0;
 }
