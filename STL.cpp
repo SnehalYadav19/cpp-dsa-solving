@@ -5,7 +5,7 @@ using namespace std;
 
 
     void print () {
-        cout<<"Siddhart";
+        cout<<"yash yadav";
     }
 
     int sum (int a , int b) {
